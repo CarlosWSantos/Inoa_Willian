@@ -1,0 +1,15 @@
+C:\Git\Will\Inoa_Willian\bin\Debug\net8.0\Inoa_Willian.exe
+C:\Git\Will\Inoa_Willian\bin\Debug\net8.0\Inoa_Willian.deps.json
+C:\Git\Will\Inoa_Willian\bin\Debug\net8.0\Inoa_Willian.runtimeconfig.json
+C:\Git\Will\Inoa_Willian\bin\Debug\net8.0\Inoa_Willian.dll
+C:\Git\Will\Inoa_Willian\bin\Debug\net8.0\Inoa_Willian.pdb
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.AssemblyInfoInputs.cache
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.AssemblyInfo.cs
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.csproj.CoreCompileInputs.cache
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.sourcelink.json
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.dll
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\refint\Inoa_Willian.dll
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.pdb
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\Inoa_Willian.genruntimeconfig.cache
+C:\Git\Will\Inoa_Willian\obj\Debug\net8.0\ref\Inoa_Willian.dll
