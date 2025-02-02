@@ -1,0 +1,4 @@
+﻿email = guibohme@gmail.com
+senha = edsbcwpdjeqanqoy
+smtp_servidor = smtp.gmail.com
+smtp_porta = 587
