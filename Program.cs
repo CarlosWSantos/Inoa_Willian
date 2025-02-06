@@ -13,9 +13,9 @@ internal class Program
         //email.SendMail();
         var x = "PETR4";
         var ativoBrasil = new AtivoBrasil();
-        var preco = ativoBrasil.GetPrice("PETR4");
         while(true)
         {
+            var preco = ativoBrasil.GetPrice("PETR4");
             if (preco < -40)
             {
                 email.SendMail($"Ativo {x} caiu!", "Compre agora.");
