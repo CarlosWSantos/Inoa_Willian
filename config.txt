@@ -1,4 +1,5 @@
 ﻿email = guibohme@gmail.com
+email2 = c.willian2004@gmail.com
 senha = edsbcwpdjeqanqoy
 smtp_servidor = smtp.gmail.com
 smtp_porta = 587

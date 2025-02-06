@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,8 @@ namespace Inoa_Willian
         {
             var json = GetAtivo(ativo).Result;
             var index = json.IndexOf("regularMarketPrice");
-            return Double.Parse(json.Substring(index + 20, 5));
+            var preco = json.Substring(index + 20, 5);
+            return Double.Parse(preco, CultureInfo.InvariantCulture);
         }
     }
 }

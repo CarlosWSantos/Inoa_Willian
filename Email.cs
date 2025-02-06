@@ -13,6 +13,7 @@ namespace Inoa_Willian
     internal class Email
     {
         private string _email = "";
+        private string _email2 = "";
         private string _password = "";
         private string _servidor = "";
         private string _port = "";
@@ -42,6 +43,7 @@ namespace Inoa_Willian
             }
 
             if (configuracoes.TryGetValue("email", out _email) &&
+                configuracoes.TryGetValue("email2", out _email2) &&
                 configuracoes.TryGetValue("senha", out _password) &&
                 configuracoes.TryGetValue("smtp_servidor", out _servidor) &&
                 configuracoes.TryGetValue("smtp_porta", out _port))
@@ -54,7 +56,7 @@ namespace Inoa_Willian
                 Console.WriteLine("Erro: Configurações incompletas no arquivo.");
             }
         }
-        public void SendMail()
+        public void SendMail(string informacoesAtivo,string orientacaoAtivo)
         {
             if (String.IsNullOrEmpty(_email))
             {
@@ -65,9 +67,9 @@ namespace Inoa_Willian
                 try
                 {
                     // destinatário
-                    string recipientEmail = "c.willian2004@gmail.com";
-                    string subject = "oiiii";
-                    string body = "CAIU! HAHAHAHA";
+                    string recipientEmail = _email2;
+                    string subject = informacoesAtivo;
+                    string body = orientacaoAtivo;
 
                     // configurando classe SMTP
                     SmtpClient smtpClient = new SmtpClient(_servidor, Int32.Parse(_port))

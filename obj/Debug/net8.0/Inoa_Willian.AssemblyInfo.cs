@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inoa_Willian")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eb4caf930fb6819995afece2c082d94b663ced1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3b0180c8552151ce3a12b879321cf2e6ebba78e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inoa_Willian")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inoa_Willian")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
