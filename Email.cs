@@ -13,7 +13,7 @@ namespace Inoa_Willian
     internal class Email
     {
         private string _email = "";
-        private string _email2 = "";
+        private string _destinatario = "";
         private string _password = "";
         private string _servidor = "";
         private string _port = "";
@@ -22,7 +22,7 @@ namespace Inoa_Willian
 
         public void GetMail(string archivePath)
         {
-
+            //tratamento de erro de ausencia de dados no arquivo cfg
             if (!File.Exists(archivePath))
             {
                 Console.WriteLine("Arquivo de configuração não encontrado");
@@ -37,13 +37,14 @@ namespace Inoa_Willian
                 if (partes.Length == 2)
                 {
                     string chave = partes[0].Trim(); //remove espaços
-                    string valor = partes[1].Trim();
+                    string valor = partes[1].Trim(); //remove espaços
                     configuracoes[chave] = valor;
                 }
             }
 
+            //salva os dados do arquivo
             if (configuracoes.TryGetValue("email", out _email) &&
-                configuracoes.TryGetValue("email2", out _email2) &&
+                configuracoes.TryGetValue("destinatario", out _destinatario) &&
                 configuracoes.TryGetValue("senha", out _password) &&
                 configuracoes.TryGetValue("smtp_servidor", out _servidor) &&
                 configuracoes.TryGetValue("smtp_porta", out _port))
@@ -67,7 +68,7 @@ namespace Inoa_Willian
                 try
                 {
                     // destinatário
-                    string recipientEmail = _email2;
+                    string recipientEmail = _destinatario;
                     string subject = informacoesAtivo;
                     string body = orientacaoAtivo;
 
@@ -78,6 +79,7 @@ namespace Inoa_Willian
                         EnableSsl = true
                     };
 
+                    //classe de dados do email
                     MailMessage mailMessage = new MailMessage(_email, recipientEmail, subject, body)
                     {
                         IsBodyHtml = true
