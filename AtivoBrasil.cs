@@ -12,8 +12,13 @@ namespace Inoa_Willian
     {
         //lista para armazenar o historico de preços
         private List<HistoricoPreco> precosHistorico = new List<HistoricoPreco>();
+        private Validador validador;
 
-        //coleta dos dados do ativo dado o nome do ativo
+        public AtivoBrasil() {
+            validador = Validador.GetInstancia();
+        }
+
+        //coleta dos dados do ativo dado o nome do ativo. A coleta ocorre a cada meia hora por limitações.
         public async Task<string> GetAtivo(string ativo)
         {
             var HttpClient = new HttpClient();
@@ -23,9 +28,9 @@ namespace Inoa_Willian
             return await json.Content.ReadAsStringAsync();
         }
 
-        public double GetPrice(string ativo)
+        public double GetPrice()
         {
-            var json = GetAtivo(ativo).Result;
+            var json = GetAtivo(validador.ativo).Result;
 
             //desserializando o Json em classes para melhor manipulação
             Resultado resultado = JsonSerializer.Deserialize<Resultado>(json);

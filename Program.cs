@@ -7,25 +7,27 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var compra = 0.0;
-        var venda = 0.0;
-        var ativo = "PETR4";
-
         var email = new Email();
         email.GetMail("C:\\Git\\Will\\Inoa_Willian\\config.txt");
+
+        var validador = Validador.GetInstancia();
+        if (!validador.ValidarArgumentos(args))
+        {
+            return;
+        }
 
         var ativoBrasil = new AtivoBrasil();
         while(true)
         {
-            var preco = ativoBrasil.GetPrice("PETR4");
+            var preco = ativoBrasil.GetPrice();
             string tendecia = ativoBrasil.GetPriceHistorico();
-            if (preco < compra)
+            if (preco < validador.compra)
             {
-                email.SendMail($"Ativo {ativo} caiu!", "Compre agora." + tendecia);
+                email.SendMail($"Ativo {validador.ativo} caiu!", $"A cotação do ativo {validador.ativo} está em {preco}. <br>Compre agora. " + tendecia);
             }
-            else if (preco > venda)
+            else if (preco > validador.venda)
             {
-                email.SendMail($"Ativo {ativo} subiu!", "Venda agora." + tendecia);
+                email.SendMail($"Ativo {validador.ativo} subiu!", $"A cotação do ativo {validador.ativo} está em {preco}. <br>Venda agora. " + tendecia);
             }
 
             Thread.Sleep(1000*60*30);

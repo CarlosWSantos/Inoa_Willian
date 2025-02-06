@@ -49,7 +49,7 @@ namespace Inoa_Willian
                 configuracoes.TryGetValue("smtp_servidor", out _servidor) &&
                 configuracoes.TryGetValue("smtp_porta", out _port))
             {
-                Console.WriteLine("sucesso!");
+                Console.WriteLine("Sucesso em ler o arquivo cfg!");
 
             }
             else
