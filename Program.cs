@@ -11,18 +11,19 @@ internal class Program
         var email = new Email();
         email.GetMail("C:\\Git\\Will\\Inoa_Willian\\config.txt");
         //email.SendMail();
-        var x = "PETR4";
+        var x = "PETR4"; //mudar
         var ativoBrasil = new AtivoBrasil();
         while(true)
         {
             var preco = ativoBrasil.GetPrice("PETR4");
+            string y = ativoBrasil.GetPriceHistorico();
             if (preco < -40)
             {
-                email.SendMail($"Ativo {x} caiu!", "Compre agora.");
+                email.SendMail($"Ativo {x} caiu!", "Compre agora." + y);
             }
-            else if (preco > 140)
+            else if (preco > 0)
             {
-                email.SendMail($"Ativo {x} subiu!", "Venda agora.");
+                email.SendMail($"Ativo {x} subiu!", "Venda agora." + y);
             }
 
             Thread.Sleep(1000*60*30);

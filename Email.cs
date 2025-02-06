@@ -78,7 +78,10 @@ namespace Inoa_Willian
                         EnableSsl = true
                     };
 
-                    MailMessage mailMessage = new MailMessage(_email, recipientEmail, subject, body);
+                    MailMessage mailMessage = new MailMessage(_email, recipientEmail, subject, body)
+                    {
+                        IsBodyHtml = true
+                    };
                     smtpClient.Send(mailMessage);
                     Console.WriteLine("enviado");
                 }
