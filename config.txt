@@ -1,5 +1,5 @@
-﻿email = guibohme@gmail.com
-destinatario = c.willian2004@gmail.com
-senha = edsbcwpdjeqanqoy
+﻿email = 
+destinatario =
+senha = 
 smtp_servidor = smtp.gmail.com
 smtp_porta = 587
